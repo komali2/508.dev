@@ -1,0 +1,89 @@
+:root {
+    --main-bg: #FFFFF5;
+    --main-text: black;
+    --h1: #202C59;
+    --link: #2D5D53;
+    --link-visited: #882088;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg: #202C59;
+        --main-text: #FFFFF5;
+        --h1: #FFFFF5;
+        --link: #94CCBF;
+        --link-visited: #EDB0ED;
+    }
+
+    img {
+        opacity: .75;
+    }
+    img:hover {
+        opacity: 1;
+    }
+}
+html {
+    line-height: 1.5;
+    background-color: var(--main-bg);
+    color: var(--main-text);
+}
+
+body {
+    margin-bottom: 200px;
+}
+
+h1, h2 {
+    color: var(--h1);
+}
+
+a {
+    color: var(--link);
+}
+a:visited {
+    color: var(--link-visited);
+}
+.title {
+    font-size: 64px;
+    margin: 12px 6px;
+}
+header {
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 48px;
+    margin: 12px 12px;
+}
+
+.description {
+    font-size: 42px;
+    margin: 12px 12px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+
+.homepage-content h1 {
+    margin: 18px 24px;
+    line-height: 1.2;
+}
+
+.homepage-content p {
+    margin: 10px 32px;
+}
+.homepage-content ul {
+    margin: 10px 32px;
+}
