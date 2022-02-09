@@ -29,6 +29,9 @@ html {
 
 body {
     margin-bottom: 200px;
+    max-width: 61em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1, h2 {
