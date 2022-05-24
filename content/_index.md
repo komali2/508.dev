@@ -44,7 +44,7 @@ Other teammembers are still updating their personal websites to be presentable o
 
 # With what technologies are you familiar?
 
-* Javascript / Node, Python, HTML, CSS
+* Javascript / Node / Typescript, Python, HTML, CSS
 * All major web frameworks, including React, Vue, Svelte, Angular, and even Backbone
 * Most major backend frameworks, including Django, Express, FastAPI, Sails.js, and Flask
 * Testing software such as Jest, pytest, Selenium, Cypress, Mocha, Chai, and Jasmine
