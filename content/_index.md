@@ -19,7 +19,7 @@ Email caleb@508.dev
 * [Cofactr](https://www.cofactr.com/), building from scratch a hardware parts search and management app with a bill of materials builder and ecommerce features. Typescript, React, Redux, Python
 * [Jovono](https://www.jovono.com/), straightforward porftolio site for a startup investment firm. Typescript, React, Airtable
 * [Curative](https://www.curative.com/), massive appointment booking software that handles thousands of appointments per day. Typescript, React, Redux, Python.
-* [Google](https://www.careers.google.com/), Google's job platform. Typescript, Vue, Vuex, Python.
+* [Google Careers](https://careers.google.com/), Google's job platform. Typescript, Vue, Vuex, Python.
 
 
 # What can the 508.dev team do for me?
