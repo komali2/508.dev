@@ -8,11 +8,19 @@ description: With a focus on Web Accessibility
 ---
 
 # What is 508.dev?
-We are a US-registered LLC that provides general software engineering services, consultation, and project-based development. In particular, our team has a lot of experience in developing accessible web applications.
+We are a US-registered LLC that provides general software engineering services, consultation, and project-based development. In particular, our team has a lot of experience in developing accessible web applications. We're based in Taiwan, and have a greater goal of exposing the highly skilled talent here in Taiwan to the global market.
 
 # How can I contact you?
 
 Email caleb@508.dev
+
+# Portfolio?
+
+* [Cofactr](https://www.cofactr.com/), building from scratch a hardware parts search and management app with a bill of materials builder and ecommerce features. Typescript, React, Redux, Python
+* [Jovono](https://www.jovono.com/), straightforward porftolio site for a startup investment firm. Typescript, React, Airtable
+* [Curative](https://www.curative.com/), massive appointment booking software that handles thousands of appointments per day. Typescript, React, Redux, Python.
+* [Google](https://www.careers.google.com/), Google's job platform. Typescript, Vue, Vuex, Python.
+
 
 # What can the 508.dev team do for me?
 Depends on your needs, which, by the way, we can help you figure out.
@@ -40,7 +48,7 @@ Yes.
 
 [Caleb](https://calebjay.com/resume.html) is a software engineer out of San Francisco with 6 years of experience developing applications for companies like Google, Curative, Humcapital, Potato, and Twilio. See the resume link for more info.
 
-Other teammembers are still updating their personal websites to be presentable on this page, which would be surprising until one learns that top chefs eat McDonald's after work.
+Other teammembers resumes pending, we have been fortunate in our search for project work and so none of us have had much time to update our personal sites!
 
 # With what technologies are you familiar?
 
@@ -53,6 +61,9 @@ Other teammembers are still updating their personal websites to be presentable o
 * Github, Gitlab, Trello, Linear, Asana, Podio, Jira
 * Docker
 
+# Do you only do Web Accessibility contracts?
+
+Actually, most of our jobs are full webapp projects. We just really care about accessibility :)
 
 # What don't you know?
 
@@ -61,3 +72,7 @@ None of us have ever touched Laravel, Ember, or ASP .NET. If you have a project 
 # How do you bill?
 
 We've done project-based and hourly and are comfortable with whatever best meets your needs.
+
+# What's your values?
+
+Caleb moved to Taiwan from San Francisco and found the engineers he was meeting in his new home to be ridiculously skilled considering the somewhat stale job market in Taiwan. Other than improving web accessibility wherever possible, we're interested in internationalizing the Taiwan engineering talent pool. For our clients, it means they get Bay Area-level engineering at a discount, for 508, it means we get to build out Silicon Valley engineering mindsets here in Taiwan, with the goal of eventually converting to a product company. To that end, even if you aren't interested in hiring a full engineering team, send Caleb an email anyway, he may be able to put you in touch with an excellent engineer in Taiwan.
