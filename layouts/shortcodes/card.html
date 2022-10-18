@@ -1,7 +1,18 @@
-<div class="card" >
+<div class="card" id="card-{{.Get "title"}}">
 
   <i class="ti ti-{{.Get "icon"}}"></i>
 
   <h2>{{.Get "title"}}</h2>
   <p>{{.Inner }}</p>
 </div>
+
+<script type="text/javascript">
+ (function() {
+   const card = document.getElementById('card-{{.Get "title"}}');
+   card.addEventListener('click', (event) => {
+     console.log('event heard', event);
+   });
+
+   console.log(card)
+ })();
+</script>

@@ -28,6 +28,6 @@ subtitle: Software Engineering Services
     Maintenance is hard, and annoying. How do you balance maintaining old features while building new ones? How do you decide when to upgrade?
     {{</card>}}
     {{<card title="Billing"  icon="receipt">}}
-    Billing can be hard to nightmarish depending on your service model and payment methods. Billing can also cut into your bottom line for every transaction.
+    Billing can be hard to nightmarish depending on your service model and payment methods. Billing can also cut into your bottom line for every transactiona.
     {{</card>}}
 {{</cardlist>}}
