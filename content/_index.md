@@ -12,10 +12,10 @@ subtitle: Software Engineering Services
 
 
 {{<cardlist>}}
-    {{<card title="Designing" content="blah">}}
-    {{<card title="Building" content="blah">}}
-    {{<card title="Hosting" content="blah">}}
-    {{<card title="Securing" content="blah">}}
-    {{<card title="Maintaining" content="blah">}}
-    {{<card title="Billing" content="blah">}}
+    {{<card title="Designing" content="blah" icon="geometry">}}
+    {{<card title="Building" content="asdfsdfasdf sdffs" icon="hammer">}}
+    {{<card title="Hosting" content="blaasdsdfasdfsdasffh" icon="server">}}
+    {{<card title="Securing" content="blah" icon="shield-lock">}}
+    {{<card title="Maintaining" content="blah" icon="bandage">}}
+    {{<card title="Billing" content="blah" icon="receipt">}}
 {{</cardlist>}}
