@@ -49,4 +49,34 @@ Need more information? Send us an email at hello@508.dev, we'll let you know wha
 
 Either you have a design or you're going to jump feet-first into a website or app without one (brave!), whatever path you take, you need to build something. The internet can be so desceptively simple: in the end, everything you're looking at is just HTML, right? (kind of!) Unfortunately, or perhaps fortunately, there are thousands of ways to generate that HTML, depending on your needs, what you're trying to build, what your hosting strategy will be, how you'll generate content, and how you plan on maintaining your website or application.
 
-At 508.dev we think it's all gotten a bit too complicated, so it's been our goal to make building apps and websites as simple as possible for our clients. We've written some of what we learned below, but if you have any questions, or even just need some advice,
+At 508.dev we think it's all gotten a bit too complicated, so it's been our goal to make building apps and websites as simple as possible for our clients. We've written some of what we learned below, but if you have any questions, or even just need some advice, feel free to email us at hello@508.dev .
+
+* So You Wanna Build a Website
+* Do We Need a Web App or a Web Site?
+* Three Hundred Ways to Build Stuff for the Internet
+
+If you just neeed something built, that's also something we can handle. Send us an email and we can help figure out if we're a good fit for your needs: hello@508.dev .
+
+
+## Hosting
+
+You've designed something, you built it, now you have some files and you need to have them served (or a program you need to have run) in a way that other people can see them in their browsers or phones. So, who's going to rent you a computer and configure everything in a way that makes the forces that run the internet happy to serve your content? The good news is, there's probably not an industry on earth with more rich competition than the world of web hosting. The bad news is, well, the same news, because all that competition means you have your work cut out for you choosing. Luckily for you, here at 508.dev, we've made this choice a many times, and we don't lock ourselves into one vendor out of convenience: we're always seeking the best value proposition for our clients, and written about our experiences doing so:
+
+* How Do I Put Stuff on the Internet?
+* Static Websites vs App Servers
+* How to Ensure You're Getting Your Money's Worth from Your Hosting Provider
+
+## Security
+
+One of the most fraught, and in our experience, misunderstood subjects in the world of internet business applications. On the one hand you have literally millions of unsecured app leaking customer and employee data to anybody with an internet connection, and on the other you have fear mongering companies charging clients for security services that at best are something their clients could easily manage on their own with a little helpful information (read below!), at middling are services that don't actually do anything, and at worse implement back doors that they can turn around sell to black market clients.
+
+Security doesn't have to be scary. Good security is getting easier every day to implement, and depending on your needs, you probably don't need to pay somebody else to handle this for you. If you're worried and want to know whether you should look into getting a security audit or seeking a network security certification of some kind, feel free to email us at hello@508.dev and we can have a quick convo about whether you need to go out of your way like that. In the meantime, see if what we've learned over the years while serving our clients can help you, help yourself:
+
+* Three Small, Easy Ways to Dramatically Increase Your Web Security
+* It Isn't Hard to Get HTTPS
+
+
+## Maintenance
+
+
+## Billing
