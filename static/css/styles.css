@@ -199,6 +199,8 @@ header .title {
     flex-flow: row;
     flex-wrap: wrap;
     margin: 0px 8px;
+    margin-bottom: 16px;
+
 }
 .card {
     position: relative;
