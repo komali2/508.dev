@@ -10,7 +10,14 @@
  (function() {
    const card = document.getElementById('card-{{.Get "title"}}');
    card.addEventListener('click', (event) => {
-     console.log('event heard', event);
+     const targetClassList = card.classList;
+     if (targetClassList.contains('active')) {
+       if (event.target.nodeName !== 'P') {
+         targetClassList.remove('active');
+       }
+     } else {
+       targetClassList.add('active');
+     }
    });
 
    console.log(card)
