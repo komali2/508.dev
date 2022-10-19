@@ -1,9 +1,8 @@
 {{ define "main" }}
 <main aria-role="main">
-  <header class="flex flex-column flex-align-center">
-    <h1 class="title">{{.Title}}</h1>
+  <header class="row">
+    <h1 class="title col-12">{{.Title}}</h1>
     {{ with .Params.subtitle }}
-    <h1 class="subtitle">{{.}}</h1>
     {{ end }}
     {{ with .Params.description }}
     <h2 class="description">{{.}}</h2>

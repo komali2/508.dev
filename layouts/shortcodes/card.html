@@ -1,0 +1,25 @@
+<div class="card" id="card-{{.Get "title"}}">
+
+  <i class="ti ti-{{.Get "icon"}}"></i>
+
+  <h2>{{.Get "title"}}</h2>
+  <p>{{.Inner }}</p>
+</div>
+
+<script type="text/javascript">
+ (function() {
+   const card = document.getElementById('card-{{.Get "title"}}');
+   card.addEventListener('click', (event) => {
+     const targetClassList = card.classList;
+     if (targetClassList.contains('active')) {
+       if (event.target.nodeName !== 'P') {
+         targetClassList.remove('active');
+       }
+     } else {
+       targetClassList.add('active');
+     }
+   });
+
+   console.log(card)
+ })();
+</script>
