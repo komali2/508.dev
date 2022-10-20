@@ -78,5 +78,19 @@ Security doesn't have to be scary. Good security is getting easier every day to 
 
 ## Maintenance
 
+Too many wonderful websites rot slowly, unusable within even a few months of being built, and for no good reason! Updating plugins, renewing HTTPS certificates, patching security vulnerabilities, fixing broken links and APIs, the house cleaning for a website or webapp never really ends, but if your web stuff is built right, hopefully you won't have to spend too much time over the years on maintenance. 508.dev has been around for a while, and we've learned a few things about keeping maintenance costs down:
+
+* Website Biannual Maintenance Checklist
+* When to Upgrade an Old Site
+
+Of course, if you just want some experts on retainer to keep an eye on things for you, we can help find you someone, or take care of that ourselves. Send us an email at hello@508.dev to start a conversation about whether this is something you need to be outsourcing.
+
 
 ## Billing
+
+Websites are fun, but making money is even more fun. Whether you're charging for your ecommerce site, access to your online classes or articles, or charging for tickets, somehow, you need to get money from your customer's pockets, and into yours, in a way that makes everyone involved feel safe.
+
+Billing is an interesting space in the internet world. Billing related features are the most obvious targets for hacking, and for the same reason off-the-shelf tools are often some of the most secure products you plug into your website. On the other hand, good competition is slim, because between regulation and integration with various payment methods (credit card, bank transfer, etc), there's only really a few companies that have reasonable products on the market for collecting money. They're not *too* hard to get running on your own, take a read of what we've learned setting up billing for our clients and see if you can manage it, if not, setting up online billing is something we can help you with. Email us at hello@508.dev
+
+* How Can I Charge Money on the Internet?
+* Stripe or Square, or Something Else?
