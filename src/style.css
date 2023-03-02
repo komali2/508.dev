@@ -1,0 +1,206 @@
+/* Variables */
+/* When adding new styles, try to always use variables */
+/* Design principles: https://anthonyhobday.com/sideprojects/saferules/ */
+/* https://coolors.co/000000-92dce5-f0f8f9-eee5e9-b5b1b3-7b6663-7a504a-772418-1e0d0a */
+
+:root {
+  --bg-color: ##EEE5E9;
+  --bg-secondary-color: #f3f3f6;
+  --color-primary: #772418;
+  --color-primary-off: #7a504a;
+  --color-lightGrey: #f0f8f9;
+  --color-grey: #B5B1B3;
+  --color-darkGrey: #7b6663;
+  --color-error: #d43939;
+  --color-success: #28bd14;
+  --grid-maxWidth: 120rem;
+  --grid-gutter: 2rem;
+  --font-size: 1.6rem;
+  --font-color: #1e0d0a;
+  --font-family-sans: -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next",
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-family-mono: monaco, "Consolas", "Lucida Console", monospace;
+  --margin-small: 8px 8px;
+  --margin-big: 16px 16px;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  scrollbar-color: var(--color-lightGrey) var(--bg-primary);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--color-lightGrey);
+}
+
+body {
+  background-color: var(--bg-color);
+  line-height: 1.6;
+  font-size: var(--font-size);
+  color: var(--font-color);
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif; /*fallback*/
+  font-family: var(--font-family-sans);
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin: 0.35em 0 0.7em 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.85em;
+}
+
+a {
+  color: var(--color-primary);
+}
+a:visited {
+  color: var(--color-primary-off);
+}
+
+a:hover:not(.button) {
+  opacity: 0.75;
+}
+
+button {
+  font-family: inherit;
+}
+
+p {
+  margin-top: 0;
+}
+
+blockquote {
+  background-color: var(--bg-secondary-color);
+  padding: 1.5rem 2rem;
+  border-left: 3px solid var(--color-lightGrey);
+}
+
+dl dt {
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  background-color: var(--color-lightGrey);
+  height: 1px;
+  margin: 1rem 0;
+}
+
+
+code,
+kbd,
+pre,
+samp,
+tt {
+  font-family: var(--font-family-mono);
+}
+
+code,
+kbd {
+  padding: 0 0.4rem;
+  font-size: 90%;
+  white-space: pre-wrap;
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  background-color: var(--bg-secondary-color);
+  color: var(--color-error);
+}
+
+pre {
+  background-color: var(--bg-secondary-color);
+  font-size: 1em;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+img {
+  max-width: 100%;
+}
+
+fieldset {
+  border: 1px solid var(--color-lightGrey);
+}
+
+iframe {
+  border: 0;
+}
+p {
+    margin: var(--margin-small);
+}
+
+header h1 {
+    font-size: calc(var(--font-size ) * 20);
+    margin: var(--margin-small);
+    line-height: 1;
+}
+
+header h2 {
+    font-size: calc(var(--font-size ) * 15);
+    margin: var(--margin-small);
+    line-height: 1;
+}
+
+header p {
+    font-size: calc(var(--font-size) * 2);
+}
+
+section.index {
+    border: 1px solid var(--color-lightGrey);
+    border-radius: 2px;
+    margin: var(--margin-big );
+}
