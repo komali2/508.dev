@@ -3,53 +3,61 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="author" content="Caleb Rogers">
+    <meta name="author" content="Caleb Rogers, Sam Simonds">
     <meta name="description" content="508.dev LLC, Engineering Services Co-op">
     <meta name="keywords" content="engineering, saas, web development, app development">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href=""> <!--add image icon here-->
+    <link href="css/style.css" rel="stylesheet">
     <title>508.dev Engineering</title>
   </head>
   <body>
     <header>
-      <h1>
-        508.dev
-      </h1>
-      <h2>
-        Engineering Services
-      </h2>
+        <h1 class="desktop">
+          508.dev
+        </h1>
+        <h1 class="tablet">
+          508.dev
+        </h1>
+        <h1 class="mobile">
+          508. dev
+        </h1>
+        <h2 class="desktop">
+          Software Engineering Co-op
+        </h2>
+        <h2 class="tablet">
+          Software Engineering
+        </h2>
+        <h2 class="tablet">
+          Co-op
+        </h2>
+        <h2 class="mobile">
+          Software Engineering Co-op
+        </h2>
       <section>
-        <p>
-          508.dev LLC is an Engineering Co-op registered in the USA.
-        </p>
-        <p>
-          We develop excellent apps for our clients. Learn more at the <a href="#client-index">client index</a>.
-        </p>
-        <p>
-          We help engineers leverage their skills to improve the world. Learn more at the <a href="#engineer-index">engineer index</a>.
-        </p>
+        <nav>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="clients.html">Client</a></li>
+            <li><a href="engineering.html">Engineer</a></li>
+          </ol>
+        </nav>
       </section>
     </header>
     <main>
-      <section class="index" id="client-index">
+      <section class="index">
         <h1>
           Client Index
         </h1>
         <p>
-          508.dev's primary activity is the development of applications for our clients. Our team has a wide array of skills, and so our capabilities are great. Here's some things we've developed for our clients:
+          508.dev's primary activity is the development and consultation of develelopment of software applications for our clients. Our team has a wide array of skills, and so our capabilities are great. Here's some things we've developed for our clients:
         </p>
         <ul>
           <li>
-            SaaS web frontend SPA for Y-Combinator backed hardware industry startup
+            <a href="clients.html#cofactr"> SaaS web frontend SPA for Y-Combinator backed hardware industry startup</a>
           </li>
           <li>
-            SSR SPA portfolio site for investment firm
-          </li>
-          <li>
-            SSG SPA conversion and CMS migration for investment firm
-          </li>
-          <li>
-            Web based videogame for robotics company
+            <a href="clients.html#jovono">SSR to SSG conversion, and CMS migration for for investment firm</a>
           </li>
         </ul>
         <p>
@@ -75,9 +83,43 @@
             Framework, CMS, database, hosting, or other migrations
           </li>
         </ul>
+        <p>
+          Learn more on our <a href="/clients.html">clients page,</a> or email us at <code>hello@508.dev</code>.
+        </p>
       </section>
-      <section class="index" id="engineer-index">
-        test
+      <section class="index">
+        <h1>
+          Engineer Index
+        </h1>
+        <p>
+          As a co-op, 508.dev exists to help our teammates grow and succeed together. Compared to a "traditional" compnay, at a co-op, teammates can expect to have larger scopes of responsibility, greater opportunities for learning and growth, and a far larger slice of a company's profits.
+        </p>
+        <p>
+          We're always interested in growing our team and helping people grow. As a general software consultancy, we're open to people with all sorts of engineering backgrounds. We also really love helping new engineers, and those interested in engineering, find ways to grow.
+        </p>
+        <p>
+          In fact, we found there are so many people interested in upskilling their engineering, we developed an initiative for internal project development, with a goal of creating opportunities to ramp up junior engineers on real-world, production-scale projects.
+        </p>
+        <p>
+          This lets us upskill and hone our engineering pool, while investing our spare time on internal product development that we may be able to monetize.
+        </p>
+        <p>
+          Learn more on our <a href="/engineers.html">engineering page</a>. If you're an engineer looking to participate in a co-op, email <code>hello@508.dev</code>.
+        </p>
+      </section>
+      <section>
+        <h1>
+          Why a co-op?
+        </h1>
+        <p>
+          All stakeholders benefit from 508.dev incorporating as a co-op. <a href="https://www.uk.coop/sites/default/files/2020-10/co-operative_survival_1.pdf">80% of co-ops survive the first 5 years of business</a>, compared to only 44% of "traditional" businesses. That means our clients can be confident in our continued existence so as to provide ongoing support for our software, and our engineers can be confident in the stability of our organization. Furthermore, because co-ops engage in profit sharing, our engineers are far more invested in the success of the business than at a "traditional" company, which translates to much higher value and faster deliverables for our clients.
+        </p>
+        <h1>
+          Do you only build "ugly" simple-looking designs, like this site?
+        </h1>
+        <p>
+          Hah, no. This site looks like it does because we wanted something that gets the job done, and the job that needs doing is telling you who we are and what we do. When we're building for clients, the job is different, and usually means making something with a more "traditional" design. See: <a href="https://www.jovono.com">Jovono</a>, <a href="https://www.cofactr.com">Cofactr</a>
+        </p>
       </section>
     </main>
   </body>
