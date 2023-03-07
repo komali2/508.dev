@@ -380,7 +380,6 @@ nav li a:visited {
 }
 
 .bio-area {
-  background-color: var(--bg-color);
   padding: 50px 35px 30px 35px;
   display: flex;
   flex-wrap: wrap;
@@ -389,7 +388,6 @@ nav li a:visited {
 
 .bio-area .single-bio {
   margin: 0px 13px 30px 13px;
-  width: 250px;
   float: left;
 }
 
