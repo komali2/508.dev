@@ -28,7 +28,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -57,8 +57,8 @@ body {
   color: var(--font-color);
   font-family: "Segoe UI", "Helvetica Neue", sans-serif; /*fallback*/
   font-family: var(--font-family-sans);
-  margin: 0;
   padding: 0;
+  max-width: 72rem;
 }
 
 h1,
@@ -187,7 +187,7 @@ p {
 }
 
 header h1 {
-  font-size: calc(var(--font-size ) * 7);
+  font-size: calc(var(--font-size ) * 12);
   margin: var(--margin-small);
   line-height: 1;
 }
@@ -208,95 +208,13 @@ section.index {
   margin: var(--margin-big);
 }
 
-@media only screen and (max-width: 767px) {
-  .header-area {
-    padding: 10px 0;
-  }
-
-  .bio-area {
-    padding: 50px 0 20px 0;
-  }
-  
-  nav {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-  .header-area {
-    text-align: left;
-  }
-}
 
 
-.title-section {
-  margin: 80px auto 20px auto;
-  text-align: center;
-}
-
-.header-area {
-  width: 100%;
-  padding: 40px 10px;
-  margin: 0px;
-  margin-bottom: 10px;
-  top: 0px;
-  display: flex;
-  background-color: #000;
-  color: var(--bg-secondary-color);
-  justify-content: space-between;
-  align-items: flex-end;
-  position: absolute;
-  border-bottom: 1px solid var(--color-lightGrey);
-  z-index: 10;
-}
-
-.header-text {
-  justify-content: center;
-  text-align: center;
-  left: 10%;
-  top: 1vw;
-  position: absolute;
-  line-height: 0.1vw;
-  color: var(--bg-secondary-color);
-  text-decoration: none;
-}
-
-.header-text h3 {
-  font-size: 3em;
-}
-
-.header-text h3 a {
-  text-decoration: none;
-  color: var(--bg-secondary-color);
-}
-
-.header-text h5 {
-  font-size: .75em;
-}
-
-.nav-container {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  margin-left: auto;
-  position: absolute;
-  right: 10%;
-  top: 15%
-}
-
-nav {
-  margin-left: auto;
-}
-
-nav ul {
+nav ol {
   list-style-type: none;
   padding: 0;
   list-style: none;
   display: flex;
-}
-
-nav li {
-  margin-left: 20px;
 }
 
 nav li:first-child {
@@ -304,30 +222,17 @@ nav li:first-child {
 }
 
 nav li a {
-  color: var(--bg-secondary-color);
-  text-decoration: none;
   text-align: center;
   padding: 10px;
   margin-bottom: 5px;
 }
 
 nav li a:visited {
-  color: var(--bg-secondary-color);
-  text-decoration: none;
   text-align: center;
   padding: 10px;
   margin-bottom: 5px;
 }
 
-nav li a:hover {
-  background-color: var(--bg-secondary-color);
-  color: var(--font-color);
-}
-
-nav ul li {
-  color: var(--bg-secondary-color);
-  text-decoration: none;
-}
 
 .toggle-menu {
   display: none;
@@ -347,22 +252,60 @@ nav ul li {
   overflow: hidden;
 }
 
+.desktop {
+    display: block;
+}
+.mobile {
+    display: none;
+}
+.tablet {
+    display: none;
+}
+
+/* Tablet and Half Screen Styles */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .desktop {
+        display: none;
+    }
+    .tablet {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /* body { */
+    /*     max-width: 100rem; */
+    /* } */
+    header h1 {
+        font-size: calc(var(--font-size ) * 8);
+    }
+}
+
+/* MOBILE STYLES */
 @media only screen and (max-width: 767px) {
-  header h1 {
-    font-size: 5em;
-  }
+    .desktop {
+        display: none;
+    }
+    .tablet {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    header h1 {
+        font-size: calc(var(--font-size ) * 7);
+    }
 
-  header h2 {
-    font-size: 2em;
-  }
+    header h2 {
+    }
 
-  header h3 {
-    font-size: 1.5em;
-  }
+    header h3 {
+    }
 
-  header p {
-    font-size: 1em;
-  }
+    header p {
+    }
 
   .toggle-menu {
     display: block;
@@ -413,7 +356,7 @@ nav ul li {
   .toggle-menu:hover .dropdown-content {
     display: block;
   }
-  
+
   .bio-area {
     display: block;
     justify-content: center;
@@ -543,4 +486,3 @@ nav ul li {
   background-color: var(--color-grey);
   border-radius: 15rem 15rem 0 0;
 }
-
