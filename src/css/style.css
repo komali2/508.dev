@@ -69,6 +69,7 @@ h5,
 h6 {
   font-weight: 500;
   margin: 0.35em 0 0.7em 0;
+  line-height: 1;
 }
 
 h1 {
@@ -202,6 +203,11 @@ header p {
   font-size: calc(var(--font-size) * 1.2);
 }
 
+section {
+    margin: var(--margin-big);
+}
+
+/* TODO Probably delete this and combine with section above */
 section.index {
   border: 1px solid var(--color-lightGrey);
   border-radius: 2px;
@@ -389,6 +395,7 @@ nav li a:visited {
 .bio-area .single-bio {
   margin: 0px 13px 30px 13px;
   float: left;
+  width: 250px;
 }
 
 .bio-area .single-bio .thumb {
