@@ -209,7 +209,6 @@ section {
 
 /* TODO Probably delete this and combine with section above */
 section.index {
- /* border: 1px solid var(--color-lightGrey); */
   border-radius: 2px;
   margin: var(--margin-big);
 }
