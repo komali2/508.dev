@@ -467,9 +467,6 @@ nav li a:visited {
   transform: scale(1);
 }
 
-.bio-area .single-bio:hover .thumb::before {
-  opacity: .2;
-}
 
 /*avatar designs here*/
 .avatar-head {
