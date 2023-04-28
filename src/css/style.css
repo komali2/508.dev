@@ -213,6 +213,9 @@ section.index {
   margin: var(--margin-big);
 }
 
+section details summary{
+  cursor: pointer;
+}
 
 
 nav ol {
