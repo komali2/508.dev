@@ -35,4 +35,4 @@ jobs:
       - name: Scan into known hosts
         run: ssh-keyscan -H -p "$SSH_PORT" "$SSH_HOST" > ~/.ssh/known_hosts
       - name: Send updated source to our VPS
-        run: rsync -rav --delete -e 'ssh -p 3732'  ${{ github.workspace }}/src/  "$SSH_USERNAME"@"$SSH_HOST":/var/www/html/
+        run: rsync -rav --delete --omit-dir-times -e  'ssh -p 3732'  ${{ github.workspace }}/src/  "$SSH_USERNAME"@"$SSH_HOST":/var/www/html/
