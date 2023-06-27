@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Caleb Rogers, Sam Simonds">
+    <meta name="description" content="508.dev LLC, Engineering Services Co-op">
+    <meta name="keywords" content="engineering, saas, web development, app development">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href=""> <!--add image icon here-->
+    <link href="../../css/style.css" rel="stylesheet">
+    <title>508 - Make a Blog</title>
+  </head>
+  <body>
+    <header>
+        <h2 class="desktop">
+          Make a Blog
+        </h2>
+        <h2 class="tablet">
+          Make a Blog
+        </h2>
+        <h2 class="mobile">
+          Make a Blog
+        </h2>
+        <h3><time datetime="2023-06-26">June 26, 2023</time></h3>
+        <h4>
+        <address>
+          Author: <a href="https://calebjay.com">Caleb Rogers</a>
+        </address>
+        </h4>
+      <section>
+        <nav>
+          <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../clients.html">Client</a></li>
+            <li><a href="../../engineering.html">Engineer</a></li>
+            <li><a href="../index.html">Blog</a></li>
+          </ol>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <section>
+        <p>
+          I've been meaning to make this blog for, like, a year. But, I was stuck on my requirements. I wanted it to be easily contributed to by any of our devs, and I wanted updates to deploy automatically.
+        </p>
+        <p>
+          For a while I was considering deploying a Hugo blog, much like <a href="https://blog.calebjay.com">my personal blog is</a>, or something with Github Pages, but more time went by while I did a lot of 508 work that I wanted to write about, and I had no platform on which to write it.
+        </p>
+        <p>
+          So, instead, here's a plain <code>index.html</code> file, nested in a <code>/blog/posts</code> folder just plopped in a static directory. The 508 website, and thus this blog, are hosted statically by nginx running on an apps server (VPS) we have for deploying all our apps. Anytime there's a merge to master, <a href="https://github.com/508-dev/508.dev/blob/main/.github/workflows/deploy-prod.yml">a Github action</a> runs that literally just <code>rsync</code>s the updated files to the VPS. Keys and whatnot are stored encrypted (hopefully) on Github Secrets and copied over as env vars to the little instance Github I guess spins up for these actions. I can't believe that's free but oh well. If it ever isn't, we'll just switch to a deployed instance of Gitlab or something.
+        </p>
+        <p>
+          Cost and control keeps resulting in me deploying open source options, or choosing "older" strategies, for various 508 things. We needed some kind of global project management for internal client projects, so the strategy we were using for public projects, Github Projects, wasn't possible because you need paid user accounts for each user you want to have access to a private project. That's like, 10$ a head or something ridiculous. Imagine needing to pay 10$ a month to give your client access to the ticketing instance for their specific project. Ridiculous. So, we deployed <a href="https://leantime.io/">leantime</a>.
+        </p>
+        <p>
+          Netlify, Heroku, etc costs were all skyrocketing. They're cheap for a personal project, but when you have like 8 different projects all in various stages of being built out, those "minimum floor" costs add up quick. So, we just pay like 100$ for a VPS with plenty of memory room to play with, deploy our stuff there, and nginx reverse proxy our domains to the various projects running there.
+        </p>
+        <p>
+          We looked into CRM options like Zoho, but in the end, just use a spreadsheet and google drive. If google starts restricting shares to where we need to have a paid domain account (@508.dev) to share certain files with, we'll I guess just switch to a nextcloud instance.
+        </p>
+        <p>
+          I read somewhere that all the layoffs recently at big tech companies just mean that smaller companies finally have access to devops and senior engineers to manage self-managed instances of various software we all used to pay big cloud providers for. Hopefully this will develop the space more so tiny companies like us can have even better locally managed software to run.
+        </p>
+      </section>
+    </main>
+  </body>
+
+  </html>

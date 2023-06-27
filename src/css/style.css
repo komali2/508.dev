@@ -16,7 +16,7 @@
   --color-avatar-bg: #e8e8e8;
   --grid-maxWidth: 120rem;
   --grid-gutter: 2rem;
-  --font-size: 1.6rem;
+  --font-size: 16px;
   --font-color: #1e0d0a;
   --font-family-sans: -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next",
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
@@ -32,6 +32,7 @@ html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: var(--font-size);
 }
 
 *, *:before, *:after {
@@ -53,12 +54,12 @@ html {
 body {
   background-color: var(--bg-color);
   line-height: 1.6;
-  font-size: var(--font-size);
   color: var(--font-color);
   font-family: "Segoe UI", "Helvetica Neue", sans-serif; /*fallback*/
   font-family: var(--font-family-sans);
   padding: 0;
   max-width: 72rem;
+  font-size: 1.8rem;
 }
 
 h1,
@@ -73,27 +74,27 @@ h6 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 1.75rem;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 h5 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 h6 {
-  font-size: 0.85em;
+  font-size: 0.85rem;
 }
 
 a {
@@ -188,15 +189,24 @@ p {
 }
 
 header h1 {
-  font-size: calc(var(--font-size ) * 12);
+    font-size: 13rem;
+    margin: var(--margin-small);
+    line-height: 1;
+}
+
+header h2 {
+  font-size: 5rem;
   margin: var(--margin-small);
   line-height: 1;
 }
 
-header h2 {
-  font-size: calc(var(--font-size ) * 2.7);
-  margin: var(--margin-small);
-  line-height: 1;
+header h3 {
+    margin: var(--margin-small);
+    line-height: 1;
+}
+header h4 {
+    margin: var(--margin-small);
+    line-height: 1;
 }
 
 header p {
@@ -208,10 +218,6 @@ section {
 }
 
 /* TODO Probably delete this and combine with section above */
-section.index {
-  border-radius: 2px;
-  margin: var(--margin-big);
-}
 
 section details summary{
   cursor: pointer;
@@ -283,12 +289,6 @@ nav li a:visited {
         display: none;
     }
 
-    /* body { */
-    /*     max-width: 100rem; */
-    /* } */
-    header h1 {
-        font-size: calc(var(--font-size ) * 8);
-    }
 }
 
 /* MOBILE STYLES */
@@ -303,17 +303,21 @@ nav li a:visited {
         display: block;
     }
     header h1 {
-        font-size: calc(var(--font-size ) * 7);
+        font-size: 10rem;
     }
-
     header h2 {
+        font-size: 4rem;
+    }
+    section {
+        margin: 0px 0px;
+        margin-bottom: 16px;
+    }
+    nav ol {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    header h3 {
-    }
-
-    header p {
-    }
 
   .toggle-menu {
     display: block;
@@ -446,12 +450,12 @@ nav li a:visited {
 
 .bio-area .single-bio .bio-info h3 a {
   color: var(--font-color);
-  font-size: 22px;
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
 .bio-area .single-bio .bio-info p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--color-darkGrey);
   margin-bottom: 0;
