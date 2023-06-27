@@ -16,7 +16,7 @@
   --color-avatar-bg: #e8e8e8;
   --grid-maxWidth: 120rem;
   --grid-gutter: 2rem;
-  --font-size: 1.6rem;
+  --font-size: 16px;
   --font-color: #1e0d0a;
   --font-family-sans: -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next",
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
@@ -32,7 +32,7 @@ html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-size: 16px;
+  font-size: var(--font-size);
 }
 
 *, *:before, *:after {
@@ -188,15 +188,24 @@ p {
 }
 
 header h1 {
-  font-size: calc(var(--font-size ) * 12);
-  margin: var(--margin-small);
-  line-height: 1;
+    font-size: 13rem;
+    margin: var(--margin-small);
+    line-height: 1;
 }
 
 header h2 {
   font-size: calc(var(--font-size ) * 2.7);
   margin: var(--margin-small);
   line-height: 1;
+}
+
+header h3 {
+    margin: var(--margin-small);
+    line-height: 1;
+}
+header h4 {
+    margin: var(--margin-small);
+    line-height: 1;
 }
 
 header p {
@@ -283,12 +292,6 @@ nav li a:visited {
         display: none;
     }
 
-    /* body { */
-    /*     max-width: 100rem; */
-    /* } */
-    header h1 {
-        font-size: calc(var(--font-size ) * 8);
-    }
 }
 
 /* MOBILE STYLES */
@@ -303,7 +306,7 @@ nav li a:visited {
         display: block;
     }
     header h1 {
-        font-size: calc(var(--font-size ) * 7);
+        font-size: 10rem;
     }
 
     header h2 {
