@@ -312,6 +312,11 @@ nav li a:visited {
         margin: 0px 0px;
         margin-bottom: 16px;
     }
+    nav ol {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
 
   .toggle-menu {
