@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Caleb Rogers">
+    <meta name="description" content="How to contribute to 508.dev, an engineering co-op, and get a good project on your portfolio in return.">
+    <meta name="keywords" content="engineering, saas, web development, app development">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../css/style.css" rel="stylesheet">
+    <title>508 - How to Contribute to 508</title>
+  </head>
+  <body>
+    <header>
+        <h2 class="desktop">
+          How to Contribute to 508
+        </h2>
+        <h2 class="tablet">
+          How to Contribute to 508
+        </h2>
+        <h2 class="mobile">
+          How to Contribute to 508
+        </h2>
+        <h3><time datetime="2023-06-28">June 28, 2023</time></h3>
+        <h4>
+        <address>
+          Author: <a href="https://calebjay.com">Caleb Rogers</a>
+        </address>
+        </h4>
+      <section>
+        <nav>
+          <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../clients.html">Client</a></li>
+            <li><a href="../../engineering.html">Engineer</a></li>
+            <li><a href="../index.html">Blog</a></li>
+          </ol>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <section>
+        <p>
+          508.dev has <a href="https://github.com/orgs/508-dev/repositories">many self-funded projects,</a> all of which are libre / open-source, none of which we're profiting from (yet). We have these projects for several reasons.
+        </p>
+        <ul>
+          <li>So as to have a co-op portfolio with shareable code to show off our skills</li>
+          <li>So as to provide opportunities for our engineers to get projects on their personal portfolios that are of a higher quality than the typical personal project</li>
+          <li>Per our <a href="../../engineering.html#values">values</a>, we are constantly striving to improve our abilities, and the best way to do that is work on projects using new tech</li>
+          <li>We need a way to evaluate engineering ability of our members and the most effective way to do that is working on a project together</li>
+          <li>Keep our skills warm between projects</li>
+        </ul>
+        <p>
+          If you're interested in working on one of these projects for no other reason than to get a better-than-normal "personal project" on your portfolio, we welcome contributions from people of all skills levels! I'll outline how to do so below.
+        </p>
+        <ul>
+          <li>
+            <a href="#find-project">
+              Find a Project, Find a Task
+            </a>
+          </li>
+          <li>
+            <a href="#clone-project">
+              Clone Project
+            </a>
+          </li>
+          <li>
+            <a href="#make-branch">
+              Make a Branch
+            </a>
+          </li>
+          <li>
+            <a href="#issue-pr">
+              Issue Pull Request
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2 id="find-project">
+          Find a Project and Task
+        </h2>
+
+        <p>Your first step is to pick a project and/or task that interests you and matches your skill level. Never fear, we really do have tasks available for ALL skill levels!</p>
+        <p>
+          There's a couple ways to find a project that interests you. First, you could just <a href="https://github.com/orgs/508-dev/repositories">browse all our repositories</a> and find one that strikes your fancy. Once you find one, for example <a href="https://github.com/508-dev/508.dev">the repo for this website</a>, you should check out the <code>Projects</code> tab of the repo. For this website, that would be <a href="https://github.com/508-dev/508.dev/projects?query=is%3Aopen">here</a>. Inside that tab you should find a project with the word "Kanban" in it. A Kanban is a project management tool where tasks are displayed as cards with a single succinct sentence describing the task, lain out in columns describing the state of that task (usually some manner of <code>TODO</code>, <code>DOING</code>, <code>IN REVIEW</code>, and <code>DONE</code>. The kanban for this website is <a href="https://github.com/orgs/508-dev/projects/4">available here</a>. Here's how a Kanban for a project might look:
+        </p>
+        <table>
+          <tr>
+            <th>
+              Ready
+            </th>
+            <th>
+              In Progress
+            </th>
+            <th>
+              In Review
+            </th>
+            <th>
+              Done
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Pop-out list of "technologies" under client section should take up more horizontal space when available
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              Fix broken link in index.html#Engineer Index
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Navigation items should have some kind of styling for a given link when on that link's page
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+          </tr>
+        </table>
+        <p>
+          On Github, you can click individual cards to see a description and more info. You can click through cards until you find one you like, and then when you're ready to work, assign it to yourself, and move it to the <code>In Progress</code> column.
+        </p>
+        <p>
+          If you don't want to go project to project to find an issue, we also have a <a href="https://github.com/orgs/508-dev/projects/13/views/1">comprehensive ticket table</a> that lists out all issues (tickets, TODOs) we have across all 508 projects. We try to keep this table updated with estimated skill level as well.
+        </p>
+      </section>
+      <section>
+        <h2 id="clone-project">
+          Clone a Project
+        </h2>
+        <p>
+          After choosing a project, you need to get the project code on your machine. To make that happen, you'll need you'll need <a href="https://git-scm.com/">git</a>, a version control software. With that installed, you'll use <code>git</code> from the terminal to "clone," or download, the code onto your machine. Then, you'll to <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">configure SSH keys on your machine</a>.
+        </p>
+        <p>
+          Then, you'll need to <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">fork</a> the repo, or, make your own version of it under your personal Github account.
+        </p>
+        <p>
+          With that done, on your fork of the project's Github page, there's a big green button labeled <code>Code</code>, with a dropdown built in. Click the button, ensure <code>SSH</code> is the tab selected. Grab the URL there, then in your terminal, <code>cd</code> to a nice place to keep code, and do <code>git clone {{URL}}</code>. If you've set up everything correctly, <code>git</code> should download the repo to your machine, with all the git history and branches as well.
+        </p>
+      </section>
+      <section>
+        <h2 id="make-branch">
+          Make a Branch
+        </h2>
+        <p>
+          Once you've chosen an issue and cloned the repo, and claimed a ticket so nobody else works on it, you need to find a way to keep your new work separate from any other work people are doing. In <code>git</code>, the way to do that is branching. To create a branch, do <code>git checkout -b {{branchname}}</code>. A good branch name should be some personal identifier, such as your name, and a shortened version of the ticket title. For example, <code>caleb/add-blogpost-contributing-508</code>. With the branch created, you're ready to start coding!
+        </p>
+        <p>
+          Using git for committing and etc is out of scope for this article. <a href="https://www.atlassian.com/git/tutorials/saving-changes/git-commit">Atlasssian has a decent article on the subject.</a>
+        </p>
+      </section>
+      <section>
+        <h2 id="issue-pr">
+          Issue a Pull Request (PR)
+        </h2>
+        <p>
+          When your code is ready, you tell the rest of us by issuing a Pull Request (PR). You worked on your own repo and your own branch, so you'll be issuing a PR to the 508 repo from across forks and branches.
+        </p>
+        <p>
+          To do so, visit the Github page for the 508 version of a given project repo. The url should be something like <code>github.com/508-dev/{{project}}</code>. If you're lucky, Github will have a little banner displayed with a shortcut to create a PR from your branch with recent pushes directly. If not, you'll need to do it yourself, by clicking the <code>Pull Requests</code> tab. From there, click the green <code>Create Pull Request</code> button. You'll be shown a series of dropdown menus for repos and branches. Annoyingly, you must do the dropdowns left to right, as changing one of the dropdowns on the left will reset the state of those on the right.
+        </p>
+        <p>
+          In the far-left dropdown, <code>Base Repository</code>, make sure this is set to the 508 version of the repo, not your own. If you don't see this option, look for <code>compare across forks</code>, visible as a link somewhere on the page. The <code>base</code> dropdown should be <code>main</code>. The <code>Head Repository</code> will be your repository, and the <code>compare</code> will be your branch in your repository.
+        </p>
+        <p>
+          With all dropdowns selected correctly, the area below the dropdowns should be populated with all the differences between your branch and the <code>main</code> branch of the 508 version of the repo. If everything looks good, click <code>Create Pull Request</code>. You'll be shown a title and comment box, which you should fill out in a fair amount of detail. Then, click <code>Create Pull Request</code> again. You're done!
+        </p>
+        <p>
+          Just kidding. At this point, a 508 core member will review your code. Almost always, there will be a change request. Keep an eye on your pull request, as people will probably be commenting and making change requests. Try not to take this personally: it's extremely rare for an engineer to get something perfect on the first try, especially when you're new to a project, no matter the skill level. If there are change requests, you can update the PR by simply pushing to it from your machine.
+        </p>
+        <p>
+          After a couple iterations of that, then you're done! Your code will be merged into the project and 508 core members will handle deployment. Congratulations, you can now put the whole project on your portfolio! Yup, your code is in the repo, so you're an official contributor! Maybe don't go overboard claiming ownership of the whole project though - expect interviewers to actually look at commit history. If you have a single small commit and pretend like the project is entirely your own work, you'll be easily found out, and it'll be a little embarrassing.
+        </p>
+      </section>
+
+    </main>
+  </body>
+
+  </html>
