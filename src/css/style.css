@@ -217,8 +217,6 @@ section {
     margin: var(--margin-big);
 }
 
-/* TODO Probably delete this and combine with section above */
-
 section details summary{
   cursor: pointer;
 }
@@ -247,6 +245,19 @@ nav li a:visited {
   margin-bottom: 5px;
 }
 
+table {
+    font-size: 1.2rem;
+}
+table, th, td {
+    border: 1px solid var(--color-darkGrey);
+}
+table th {
+    background-color: var(--color-lightGrey);
+}
+table td {
+    background-color: var(--bg-secondary-color);
+    padding: var(--margin-small);
+}
 
 .toggle-menu {
   display: none;
