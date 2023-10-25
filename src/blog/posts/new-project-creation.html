@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Caleb Rogers">
+    <meta name="description" content="Tips from the software engineering co-op 508.dev on how to deploy projects in a VPS.">
+    <meta name="keywords" content="engineering, saas, web development, app development">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../css/style.css" rel="stylesheet">
+    <title>508 - New Project Setup Steps</title>
+  </head>
+  <body>
+    <header>
+        <h2 class="desktop">
+          New Project Setup Steps
+        </h2>
+        <h2 class="tablet">
+          New Project Setup Steps
+        </h2>
+        <h2 class="mobile">
+          New Project Setup Steps
+        </h2>
+        <h3><time datetime="2023-07-19">July 19, 2023</time></h3>
+        <h4>
+        <address>
+          Author: <a href="https://calebjay.com">Caleb Rogers</a>
+        </address>
+        </h4>
+      <section>
+        <nav>
+          <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../clients.html">Client</a></li>
+            <li><a href="../../engineering.html">Engineer</a></li>
+            <li><a href="../index.html">Blog</a></li>
+          </ol>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <section>
+        <p>
+      I'm moving a lot of personal projects that are costing me money from AWS to the 508 project server, a VPS we have for hosting all our portfolio projects. We have our own VPS rather than using tools like Heroku or AWS because while such tools are great for scaling, lately minimum costs have been too high for small projects with even the slightest bit of complexity (e.g., a database). With our own VPS we can easily just spin up a bunch of docker containers for our more complex projects (such as <a href="https://github.com/508-dev/game-remix-guesser-backend">the guessagame.508.dev backend</a>), and, we can very easily deploy static sites using nginx (such as the <a href="https://github.com/508-dev/game-remix-guesser-frontend">guessagame.508.dev frontend</a>).
+        </p>
+        <p>
+          In doing so I thought it'd be cool to get a script that I can just fire off every time I want to spin up a new project that does the myriad of steps necesssary. That turned out to be too time consuming to figure out all the weird little nitty gritty, but in the effort I was at least forced to finally write down all the steps from A-Z. The <a href="https://github.com/508-dev/static-setup-script">project where this lives</a> has all the steps in the README, but for now they are as follows:
+        </p>
+        <p>
+          <ol>
+            <li>
+              Ensure Domain $NAME.508.dev A record is created on our domain manager.
+              <p>I want 508 projects to be easily shown off as simply as pulling out your phone and navigating to a URL. To that end we try to give all projects $NAME.508.dev domains. So first, we need to create an A record in our domain manager pointing at the VPS' IP address, which is static. If it wasn't static, we'd need to set up dynamic dns in our domain manager (first choosing one that has this feature), and then set up ddclient on our VPS. </p>
+            </li>
+            <li>
+              Create new user account of name $NAME
+              <p>
+                Each project has its own user on the VPS, with its own home directory. Vaguely, this is a security measure, so if somehow one project is compromised, hopefully that doesn't result in ALL of our projects being compromised.
+              </p>
+            </li>
+            <li>
+              Create SSH keys
+              <p>
+                This step is the most likely to change over time. In short, we need to make SSH keys that github actions can use to run commmands on the VPS. Generally you can make these on your local machine, save them somewhere, and then copy the public key to the new account's <code>authorized_keys</code> file.
+              </p>
+            </li>
+            <li>
+              Add user to group <code>www-data</code>
+              <p>
+                Static web-hsoted files are all kept in the <code>www-data</code> user's directory, under folders named by project name. Then, we just point nginx at each directory (see below). You need to be a member of <code>www-data</code> to write to this directory. Technically this means one compromised project can wipe out any others that use this strategy. IDK what to do about this yet. I guess... I could just have nginx point to static directories in each project's <code>home</code> folder... I need to do that in a way that the nginx program can read all those different directories. TODO to think on that.
+              </p>
+            </li>
+            <li>
+              Create directory for html, css, js output in <code>/home/www-data/</code>
+            </li>
+            <li>
+              Create file of <code>/etc/nginx/sites-available/$NAME.508.dev</code>
+              <p>
+                Juicy bit of nginx config, which in short listens to requests to <code>$NAME.508.dev</code>, and then handles them by serving static files in the given <code>root</code> directory (see the nginx config below). It can also handle SPAs by sending 404s directly back to <code>index.html</code>, which allows an SPA's route manager to handle these 404s. I should actually remove that part of the config for static projects. TODO.
+              </p>
+            </li>
+            <li>
+              Softlink into `/etc/nginx/sites-enabled/`
+              <p>
+                According to nginx norms, and my nginx config, the <code>sites-enabled</code> directory is where config files are actually picked up and made live.
+              </p>
+            </li>
+            <li>
+              Temporarily take down nginx, Create https certificate, Bring up nginx again
+              <p>
+                Getting an HTTPs certificate requires the A record to be set up, and then letting certbot spin up a temporary webserver. This webserver needs to listen on port 80, which nginx is already listening on, so you gotta take it down for a second (I think). Then certbot does its thing, gets you an https ticket, and you spin nginx back up. Certbot command below.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          That's just the first iteration, see <a href="https://github.com/508-dev/static-setup-script">the project repo</a> for the most up to date methodology we use.
+        </p>
+        <p>
+          After that's done, a project needs to have github actions set up to auto deploy on push. <a href="https://github.com/508-dev/508.dev/blob/main/.github/workflows/deploy-prod.yml">Here's an example of how that works for this website.</a>
+        </p>
+    </section>
+    <section>
+      <h3>Nginx config for a static site</h3>
+      <pre>
+      <code>
+ server {
+   listen 80;
+   listen [::]:80;
+
+   server_name $NAME.508.dev www.$NAME.508.dev;
+   return 301 https://$server_name$request_uri;
+ }
+
+ server {
+   server_name $NAME.508.dev;
+
+   gzip on;
+
+   location / {
+	autoindex on;
+	root /home/www-data/$NAME/;
+	error_page 404 = /index.html;
+   }
+
+
+   listen 443 ssl;
+   listen [::]:443;
+
+   ssl_certificate /etc/letsencrypt/live/$NAME.508.dev/fullchain.pem;
+   ssl_certificate_key /etc/letsencrypt/live/$NAME.508.dev/privkey.pem;
+   include /etc/letsencrypt/options-ssl-nginx.conf;
+}
+
+      </code>
+      </pre>
+      <h3>Nginx config for a server or anything that's getting proxied to</h3>
+      <pre>
+      <code>
+ server {
+   listen 80;
+   listen [::]:80;
+
+   server_name $NAME.508.dev www.$NAME.508.dev;
+   return 301 https://$server_name$request_uri;
+ }
+
+ server {
+   server_name $NAME.508.dev;
+
+   gzip on;
+
+   location / {
+     proxy_pass http://localhost:8000/;
+     proxy_http_version 1.1;
+     proxy_set_header Upgrade $http_upgrade;
+     proxy_set_header Connection 'upgrade';
+     proxy_set_header Host $host;
+     proxy_set_header X-Forwarded-Proto $scheme;
+     proxy_cache_bypass $http_upgrade;
+   }
+
+
+   listen 443 ssl;
+   listen [::]:443;
+
+   ssl_certificate /etc/letsencrypt/live/$NAME.508.dev/fullchain.pem;
+   ssl_certificate_key /etc/letsencrypt/live/$NAME.508.dev/privkey.pem;
+   include /etc/letsencrypt/options-ssl-nginx.conf;
+}
+
+
+      </code>
+      </pre>
+      <h3>Certbot command</h3>
+      <code>
+sudo certbot certonly --standalone -d $NAME.508.dev
+      </code>
+      <p>
+        Other command examples can be seen in the <a href="https://github.com/508-dev/static-setup-script">setup script repo</a>
+      </p>
+    </section>
+    </main>
+  </body>
+
+  </html>
