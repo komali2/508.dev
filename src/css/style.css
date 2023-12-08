@@ -411,10 +411,8 @@ table td {
 }
 
 .bio-area .single-bio {
-  display: flex;
-  flex-direction: column;
   margin: 0px 13px 30px 13px;
-  width: calc(33% - 76px);
+  width: 250px;
   box-sizing: border-box;
 }
 
