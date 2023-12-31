@@ -130,7 +130,7 @@ dl dt {
 
 hr {
   border: none;
-  background-color: var(--color-lightGrey);
+  background-color: var(--color-darkGrey);
   height: 1px;
   margin: 1rem 0;
 }
