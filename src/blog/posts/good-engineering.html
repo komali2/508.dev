@@ -44,7 +44,7 @@
         <p>
           After <a href="https://www.youtube.com/watch?v=db8FfUShu8g">I got featured on Teddy Lai's Youtube channel</a>
           in an interview, 508.dev membership has exploded. We now have around 60 members, up from the 15 or so we had
-          before. Before, I was able to one-on-one mentor people into the "508 style" of engineering, but now I think
+          before. Previously, I was able to one-on-one mentor people into the "508 style" of engineering, but now I think
           it's best to start with a primer, and from there mentor people into our style as needed.
         </p>
         <p>
@@ -58,6 +58,39 @@
           and to help our engineers grow themselves professionally, I'm going to define these skills, as well as ones
           that deal with coding itself.
         </p>
+        <ul>
+          <li>
+            <a href="#soft-skills">Important Soft Skills</a>
+          </li>
+          <ul>
+            <li>
+              <a href="#time-management">Time Management</a>
+            </li>
+            <li>
+              <a href="#personal-responsibility">Personal Responsibility</a>
+            </li>
+            <li>
+              <a href="#project-management">Project Management</a>
+            </li>
+
+          </ul>
+          <li>
+            <a href="#hard-skills">
+            Important Hard Skills
+            </a>
+          </li>
+          <ul>
+            <li>
+              <a href="#code-standards">Code Standards</a>
+            </li>
+            <li>
+              <a href="#git-standards">Git Standards</a>
+            </li>
+            <li>
+              <a href="#acccessibility">Accessibility Standards</a>
+            </li>
+          </ul>
+        </ul>
       </section>
       <section>
         <h2 id="soft-skills">
@@ -102,7 +135,7 @@
             The easiest way to know what to work on next is to have it written down, probably in a TODO list. The easiest
             way to know what to work on after that is to have it written down, either in the same TODO list, or in some
             kind of project management solution, such as a kanban board. The easiest way to know what to work on when
-            you aren't sure what to work on is to have clearly defined the answer to this question before a question
+            you aren't sure what to work on is to have clearly defined the answer to this question before a project
             begins; we'll get into that more later.
           </p>
           <p>
@@ -188,38 +221,38 @@
             I have thus developed a set of steps I require myself to go through before I ask for help, especially from
             a client.
           </p>
-          <ul>
-            <ol>
+          <ol>
+            <li>
               Stare at the code for a decent amount of time, no matter how unreadable it is.
-            </ol>
-            <ol>
+            </li>
+            <li>
               If dealing with libraries or certain functions, ensuring to look at implementation details, methods,
               arguments available to a function, or other functions or components available from a library.
-            </ol>
-            <ol>
+            </li>
+            <li>
               Flip around some other files, some other places a given component is used, the UI itself (if ui code),
               or any other parts of the code base that might illuminate more info about the issue.
-            </ol>
-            <ol>
+            </li>
+            <li>
               Read any relevant documentation. If dealing with a library, looking at examples of their implementations.
-            </ol>
-            <ol>
+            </li>
+            <li>
               Google the issue I'm having.
-            </ol>
-            <ol>
+            </li>
+            <li>
               Stack overflow the issue I'm having.
-            </ol>
-            <ol>
+            </li>
+            <li>
               Ask ChatGPT questions to help me define the problem better (ChatGPT solutions themselves are almost
               never good and often are rabbit holes).
-            </ol>
-            <ol>
+            </li>
+            <li>
               Go for a walk, then repeat all the above steps.
-            </ol>
-            <ol>
+            </li>
+            <li>
               Do something else for a significant amount of time, then repeat all the above steps.
-            </ol>
-          </ul>
+            </li>
+          </ol>
           <p>
             After I complete these steps, I consider myself having fulfilled my personal responsibility. Doing these
             helps avoid an embarrassing situation where a client issues a single line PR with an obvious fix, or linking
@@ -331,6 +364,10 @@
             certainly room for conversation about what code style is decided on, but the important thing is that one
             style is decided upon, and enforced.
           </p>
+          <p>
+            For more information on writing good code, I recommend the famous <a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/">
+            "The Pragmatic Programmer"</a>.
+          </p>
         </section>
         <section id="git-standards">
           <h2>
@@ -364,8 +401,46 @@
             ships with. At minimum, make sure to <a href="https://medium.com/@igor_marques/git-workflow-basics-d405746f6205#.i552b7mwd">
             read up on the basics</a>.
           </p>
+          <p>
+            You should know how to do all of the following in git without needing to look it up or depend on Github's UI:
+          </p>
+          <ul>
+            <li>
+              Clone a repository
+            </li>
+            <li>
+              Create and push a new feature branch
+            </li>
+            <li>
+              Update a branch even if it has local changes that the remote doesn't have, and the remote has changes the local doesn't have
+            </li>
+            <li>
+              Merge branches locally
+            </li>
+            <li>
+              Resolve a merge conflict
+            </li>
+            <li>
+              Change a commit message in history
+            </li>
+            <li>
+              Merge two or more commits into one commit
+            </li>
+            <li>
+              See git history for a given file
+            </li>
+            <li>
+              See general git history for project
+            </li>
+            <li>
+              Use git to see who the last engineer to change a given line was, and in what commit they changed it
+            </li>
+            <li>
+              Push code for someone else to see, then soft reset to continue working as if you never made that commit
+            </li>
+          </ul>
         </section>
-        <section>
+        <section id="acccessibility">
           <h2>
             Accessibility Standards
           </h2>
